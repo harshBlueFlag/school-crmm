@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config(); // Load environment variables from .env
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/school-crm', {
-      
-    });
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('MongoDB Connected');
   } catch (error) {
     console.error('MongoDB connection failed:', error.message);
@@ -13,4 +12,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-
