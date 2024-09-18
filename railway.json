@@ -1,0 +1,9 @@
+{
+    "build": {
+      "baseDirectory": "school-crm-backend"
+    },
+    "start": {
+      "command": "npm start"
+    }
+  }
+  
